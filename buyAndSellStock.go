@@ -18,6 +18,9 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 */
 
 func maxProfit(prices []int) int {
+	if len(prices) == 0 {
+		return 0
+	}
 	lowestPrice := prices[0]
 	var profit int
 	for _, price := range prices {
