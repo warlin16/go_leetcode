@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /**
 You are climbing a stair case. It takes n steps to reach to the top.
 
@@ -25,27 +27,31 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 */
 
-// func climbStairs(n int) int {
-// 	if n <= 1 {
-// 		return 1
-// 	}
-// 	return climbStairs(n-1) + climbStairs(n-2)
-// }
-
-// ^ super slow
+var cache map[int]int = make(map[int]int)
 
 func climbStairs(n int) int {
-	if n == 1 {
+	fmt.Println("What is this value", cache[12])
+	if n <= 1 {
 		return 1
 	}
-	if n == 2 {
-		return 2
+	if cache[n] == 0 {
+		cache[n] = climbStairs(n-1) + climbStairs(n-2)
 	}
-	numberOfSteps := []int{1, 2}
-	for len(numberOfSteps) != n {
-		lastNum := numberOfSteps[len(numberOfSteps)-1]
-		penultimateNum := numberOfSteps[len(numberOfSteps)-2]
-		numberOfSteps = append(numberOfSteps, lastNum+penultimateNum)
-	}
-	return numberOfSteps[len(numberOfSteps)-1]
+	return cache[n]
 }
+
+// func climbStairs(n int) int {
+// 	if n == 1 {
+// 		return 1
+// 	}
+// 	if n == 2 {
+// 		return 2
+// 	}
+// 	numberOfSteps := []int{1, 2}
+// 	for len(numberOfSteps) != n {
+// 		lastNum := numberOfSteps[len(numberOfSteps)-1]
+// 		penultimateNum := numberOfSteps[len(numberOfSteps)-2]
+// 		numberOfSteps = append(numberOfSteps, lastNum+penultimateNum)
+// 	}
+// 	return numberOfSteps[len(numberOfSteps)-1]
+// }
