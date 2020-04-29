@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /**
 You are climbing a stair case. It takes n steps to reach to the top.
 
@@ -30,7 +28,6 @@ Explanation: There are three ways to climb to the top.
 var cache map[int]int = make(map[int]int)
 
 func climbStairs(n int) int {
-	fmt.Println("What is this value", cache[12])
 	if n <= 1 {
 		return 1
 	}
