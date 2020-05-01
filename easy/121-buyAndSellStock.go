@@ -1,4 +1,4 @@
-package main
+package easy
 
 /**
 Say you have an array for which the ith element

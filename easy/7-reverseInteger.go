@@ -1,3 +1,5 @@
+package easy
+
 import "math"
 
 /**
@@ -33,5 +35,5 @@ func reverse(x int) int {
 		result = next
 	}
 
-	return ans
+	return result
 }

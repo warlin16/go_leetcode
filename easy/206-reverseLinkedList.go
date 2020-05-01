@@ -1,4 +1,4 @@
-package main
+package easy
 
 // ListNode node
 type ListNode struct {

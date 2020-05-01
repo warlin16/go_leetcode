@@ -1,4 +1,4 @@
-package main
+package easy
 
 /**
 Given a non-empty array of integers,

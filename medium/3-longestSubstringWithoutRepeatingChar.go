@@ -1,4 +1,4 @@
-package main
+package medium
 
 /**
 Given a string,
