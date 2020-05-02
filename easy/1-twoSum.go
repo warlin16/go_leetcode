@@ -1,6 +1,6 @@
 package easy
 
-func TwoSum(nums []int, target int) []int {
+func twoSum(nums []int, target int) []int {
 	m := make(map[int]int)
 	for i := 0; i < len(nums); i++ {
 		num := nums[i]
